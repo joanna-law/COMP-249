@@ -32,6 +32,19 @@ public class PublicTransportation {
 	public void setStops(int stops) {
 		this.stops = stops;
 	}
+
+	public String toString() {
+		return "PublicTransportation [The ticket price is " + ticPrice + ", it stops " + stops + "times]";
+	}
+
+	public boolean equals(PublicTransportation p) {
+		if((p.stops == this.stops)&&(p.ticPrice == this.ticPrice))
+			return true;
+		else
+			return false;
+	}
+	
+	
 		
 }
 

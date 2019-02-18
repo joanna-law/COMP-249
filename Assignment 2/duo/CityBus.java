@@ -65,6 +65,21 @@ public class CityBus extends PublicTransportation{
 	public void setDriverName(String driverName) {
 		this.driverName = driverName;
 	}
+
+	@Override
+	public String toString() {
+		return "CityBus [routeNo=" + routeNo + ", firstOp=" + firstOp + ", lineName=" + lineName + ", driverName="
+				+ driverName + ", getTicPrice()=" + getTicPrice() + ", getStops()=" + getStops() + "]";
+	}
+
+	public boolean equals(CityBus c) {
+		if((c.routeNo == this.routeNo)&&(c.getTicPrice() == this.getTicPrice())&&(c.getStops()== this.getStops())&&(c.firstOp == this.firstOp)&& (c.lineName == this.lineName)&& (c.driverName == this.lineName))
+			return true;
+		else
+			return false;
+	}
+	
+	
 	
 	
 }

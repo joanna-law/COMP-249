@@ -42,4 +42,18 @@ public class Ferry extends PublicTransportation {
 	public void setShipName(String shipName) {
 		this.shipName = shipName;
 	}
+
+	@Override
+	public String toString() {
+		return "Ferry [buildYr=" + buildYr + ", shipName=" + shipName + ", getTicPrice()=" + getTicPrice()
+				+ ", getStops()=" + getStops() + "]";
+	}
+	
+	public boolean equals(Ferry f) {
+		if((f.buildYr == this.buildYr)&&(f.shipName == this.shipName)&&(f.getTicPrice() == this.getTicPrice())&&(f.getStops()== this.getStops()))
+			return true;
+		else
+			return false;
+	}
+	
 }

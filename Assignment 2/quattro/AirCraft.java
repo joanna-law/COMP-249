@@ -21,4 +21,14 @@ public class AirCraft extends PublicTransportation {
 	{
 		super();
 	}
+	@Override
+	public String toString() {
+		return "AirCraft [getTicPrice()=" + getTicPrice() + ", getStops()=" + getStops() + "]";
+	}
+	public boolean equals(AirCraft a) {
+		if((a.getStops() == this.getStops())&&(a.getTicPrice() == this.getTicPrice()))
+			return true;
+		else
+			return false;
+	}
 }
