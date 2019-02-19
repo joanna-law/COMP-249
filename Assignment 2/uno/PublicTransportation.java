@@ -1,5 +1,9 @@
 package uno;
-
+/**
+ * parent class for all following public transportation 
+ * @author Joanna Lau Ah Wing (40083829)
+ *
+ */
 public class PublicTransportation {
 	
 	private double ticPrice;
@@ -36,14 +40,25 @@ public class PublicTransportation {
 	public String toString() {
 		return "PublicTransportation [The ticket price is " + ticPrice + ", it stops " + stops + "times]";
 	}
-
-	public boolean equals(PublicTransportation p) {
-		if((p.stops == this.stops)&&(p.ticPrice == this.ticPrice))
-			return true;
-		else
-			return false;
-	}
 	
+	/**
+	 * compares calling object with object p
+	 * @param p
+	 * @return
+	 */
+	//now have to use getter to access ticket price, etc. When it was protected, it was available to all classes in the package, when a class is private it is available only in the class.
+	public boolean equals(PublicTransportation p) {
+		if (p != null)
+			//the null verification prevents the program from crashing in case the object passed does not exist.
+			if (p instanceof PublicTransportation)
+				if((p.stops == this.stops)&&(p.ticPrice == this.ticPrice))
+					return true;
+				else
+					return false;
+			else return false;
+		else return false;
+	}
+
 	
 		
 }

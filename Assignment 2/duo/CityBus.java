@@ -68,18 +68,21 @@ public class CityBus extends PublicTransportation{
 
 	@Override
 	public String toString() {
-		return "CityBus [routeNo=" + routeNo + ", firstOp=" + firstOp + ", lineName=" + lineName + ", driverName="
-				+ driverName + ", getTicPrice()=" + getTicPrice() + ", getStops()=" + getStops() + "]";
+		return "CityBus [It goes through " + routeNo + " routes, it was first on the road in " + firstOp + ", the lineName is " + lineName + ", and it is "
+				+ driverName + " who drives it, the ticket price is " + getTicPrice() + ", it stops " + getStops() + " times.";
 	}
 
 	public boolean equals(CityBus c) {
-		if((c.routeNo == this.routeNo)&&(c.getTicPrice() == this.getTicPrice())&&(c.getStops()== this.getStops())&&(c.firstOp == this.firstOp)&& (c.lineName == this.lineName)&& (c.driverName == this.lineName))
-			return true;
-		else
-			return false;
+		if (c != null)
+			//the null verification prevents the program from crashing in case the object passed does not exist.
+			if (c instanceof CityBus)
+				if((c.routeNo == this.routeNo)&&(c.getTicPrice() == this.getTicPrice())&&(c.getStops()== this.getStops())&&(c.firstOp == this.firstOp)&& (c.lineName == this.lineName)&& (c.driverName == this.lineName))
+					return true;
+				else
+					return false;
+			else return false;
+		else return false;
 	}
-	
-	
 	
 	
 }

@@ -1,4 +1,9 @@
 package duo;
+/**
+ * class metro
+ * @author Joanna Lau Ah Wing (40083829)
+ *
+ */
 public class Metro extends CityBus{
 	
 	private int noVehicle;
@@ -32,19 +37,29 @@ public class Metro extends CityBus{
 		this.noVehicle= m.noVehicle;
 		this.cityName = m.cityName;
 	}
-	
+	//now have to use getter to access ticket price, etc. When it was protected, it was available to all classes in the package, when a class is private it is available only in the class.
 	@Override
 	public String toString() {
-		return "Metro [noVehicle=" + noVehicle + ", cityName=" + cityName + ", getRouteNo()=" + getRouteNo()
-				+ ", getFirstOp()=" + getFirstOp() + ", getLineName()=" + getLineName() + ", getDriverName()="
-				+ getDriverName() + ", getTicPrice()=" + getTicPrice() + ", getStops()=" + getStops() + "]";
+		return "Metro [The number of vehicles is " + noVehicle + ", in the city " + cityName + ". It goes through " + getRouteNo() + " routes, it was first on the road in " + getFirstOp() + ", the lineName is " + getLineName() + ", and it is "
+				+ getDriverName() + " who drives it, the ticket price is " + getTicPrice() + ", it stops " + getStops() + " times.]";
 	}
 	
+	/**
+	 * compares calling object with object m
+	 * @param m
+	 * @return
+	 */
+	
 	public boolean equals(Metro m) {
-		if((m.noVehicle == this.noVehicle)&&(m.getTicPrice() == this.getTicPrice())&&(m.getStops()== this.getStops())&& (m.cityName == this.cityName))
-			return true;
-		else
-			return false;
+		if (m != null)
+			//the null verification prevents the program from crashing in case the object passed does not exist.
+			if (m instanceof Metro)
+				if((m.noVehicle == this.noVehicle)&&(m.getTicPrice() == this.getTicPrice())&&(m.getStops()== this.getStops())&& (m.cityName == this.cityName))
+					return true;
+				else
+					return false;
+			else return false;
+		else return false;
 	}
 	
 }
