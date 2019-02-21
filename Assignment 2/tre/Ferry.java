@@ -1,6 +1,16 @@
+//Assignment 2
+//Name: Joanna Lau Ah Wing 
+//Student ID: 40083829
+//Date: 20 February 2019
+
 package tre;
 import uno.*;
 /**
+ * Joanna Lau Ah Wing 
+ * ID: 40083829
+ * 249
+ * Assignment 2
+ * Due date: 24 February 2019
  * class ferry
  * @author Joanna Lau Ah Wing (40083829)
  *
@@ -50,8 +60,8 @@ public class Ferry extends PublicTransportation {
 	//now have to use getter to access ticket price, etc. When it was protected, it was available to all classes in the package, when a class is private it is available only in the class.
 	@Override
 	public String toString() {
-		return "Ferry [It was build in year " + buildYr + ", the name of the ship is " + shipName + ". The ticket price is " + getTicPrice()
-				+ ", it stops at " + getStops() + " stops.";
+		return "Ferry [The ticket price is " + getTicPrice() + ". It was build in year " + buildYr + ", the name of the ship is " + shipName 
+				+ ", it stops at " + getStops() + " stops.]";
 	}
 	/**
 	 * compares calling object with object f

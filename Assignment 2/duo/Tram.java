@@ -1,5 +1,15 @@
+//Assignment 2
+//Name: Joanna Lau Ah Wing 
+//Student ID: 40083829
+//Date: 20 February 2019
+
 package duo;
 /**
+ * Joanna Lau Ah Wing 
+ * ID: 40083829
+ * 249
+ * Assignment 2
+ * Due date: 24 February 2019
  * class tram
  * @author Joanna Lau Ah Wing (40083829)
  *

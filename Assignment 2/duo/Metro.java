@@ -1,5 +1,15 @@
+//Assignment 2
+//Name: Joanna Lau Ah Wing 
+//Student ID: 40083829
+//Date: 20 February 2019
+
 package duo;
 /**
+ * Joanna Lau Ah Wing 
+ * ID: 40083829
+ * 249
+ * Assignment 2
+ * Due date: 24 February 2019
  * class metro
  * @author Joanna Lau Ah Wing (40083829)
  *
@@ -37,11 +47,11 @@ public class Metro extends CityBus{
 		this.noVehicle= m.noVehicle;
 		this.cityName = m.cityName;
 	}
-	//now have to use getter to access ticket price, etc. When it was protected, it was available to all classes in the package, when a class is private it is available only in the class.
+	//now have to use getter to access ticket price, etc. When it was protected, it was available to all classes in the package, when a class is private it is available only in the class.Aircraft(5000.00,0,"Balloon","Weekly");
 	@Override
 	public String toString() {
-		return "Metro [The number of vehicles is " + noVehicle + ", in the city " + cityName + ". It goes through " + getRouteNo() + " routes, it was first on the road in " + getFirstOp() + ", the lineName is " + getLineName() + ", and it is "
-				+ getDriverName() + " who drives it, the ticket price is " + getTicPrice() + ", it stops " + getStops() + " times.]";
+		return "Metro [The ticket price is " + getTicPrice() + ". The number of vehicles is " + noVehicle + ", in the city " + cityName + ". It goes through " + getRouteNo() + " routes, it was first on the road in " + getFirstOp() + ", the lineName is " + getLineName() + ", and it is "
+				+ getDriverName() + " who drives it, it stops " + getStops() + " times.]";
 	}
 	
 	/**

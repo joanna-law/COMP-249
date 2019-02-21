@@ -1,5 +1,20 @@
+//Assignment 2
+//Name: Joanna Lau Ah Wing 
+//Student ID: 40083829
+//Date: 20 February 2019
+
 package duo;
 import uno.*;
+/**
+ * Joanna Lau Ah Wing 
+ * ID: 40083829
+ * 249
+ * Assignment 2
+ * Due date: 24 February 2019
+ * class city bus
+ * @author Joanna Lau Ah Wing (40083829)
+ *
+ */
 public class CityBus extends PublicTransportation{
 	
 	private long routeNo;
@@ -68,10 +83,15 @@ public class CityBus extends PublicTransportation{
 
 	@Override
 	public String toString() {
-		return "CityBus [It goes through " + routeNo + " routes, it was first on the road in " + firstOp + ", the lineName is " + lineName + ", and it is "
-				+ driverName + " who drives it, the ticket price is " + getTicPrice() + ", it stops " + getStops() + " times.";
+		return "CityBus [The ticket price is " + getTicPrice() + "It goes through " + routeNo + " routes, it was first on the road in " + firstOp + ", the lineName is " + lineName + ", and it is "
+				+ driverName + " who drives it, it stops " + getStops() + " times.]";
 	}
 
+	/** 
+	 * compares calling object with object c
+	 * @param c
+	 * @return
+	 */
 	public boolean equals(CityBus c) {
 		if (c != null)
 			//the null verification prevents the program from crashing in case the object passed does not exist.
